@@ -1465,7 +1465,7 @@ fn extract_vector2(doc: &OdinDocument, root: NodeId) -> Option<(f32, f32)> {
     ))
 }
 
-fn extract_quaternion(doc: &OdinDocument, root: NodeId) -> Option<(f32, f32, f32, f32)> {
+pub(super) fn extract_quaternion(doc: &OdinDocument, root: NodeId) -> Option<(f32, f32, f32, f32)> {
     let ids = find_float_components_by_names_or_fallback(doc, root, &["x", "y", "z", "w"])?;
     Some((
         read_f32_primitive(doc, ids[0])?,

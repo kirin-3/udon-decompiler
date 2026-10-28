@@ -19,6 +19,9 @@ use crate::str_constants::{
 use crate::udon_asm::generated_heap_symbol;
 
 pub fn generate_csharp(ctx: &DecompileContext, class_ir: &IrClass) -> Result<String> {
+    if ctx.udonsharp.is_some() {
+        return generate_udonsharp(ctx, class_ir);
+    }
     debug!("generating C# code for {}...", class_ir.class_name);
 
     let mut class_lines = Vec::<String>::new();
@@ -86,6 +89,210 @@ pub fn generate_csharp(ctx: &DecompileContext, class_ir: &IrClass) -> Result<Str
     } else {
         Ok(raw_code)
     }
+}
+
+fn generate_udonsharp(ctx: &DecompileContext, class_ir: &IrClass) -> Result<String> {
+    use super::udonsharp::{identifier, local_name};
+    use std::collections::HashSet;
+    let metadata = ctx.udonsharp.as_ref().expect("UdonSharp metadata");
+    let mut view = ctx.clone();
+    for variable in &mut view.variables.variables {
+        if variable.name != "this" && !variable.name.starts_with("this.") {
+            variable.name = identifier(&variable.name);
+        }
+    }
+    let mut lines = vec![
+        "// Lifted from the compiled Udon program; original comments and layout are unavailable."
+            .to_string(),
+        "using UdonSharp;".to_string(),
+        "using UnityEngine;".to_string(),
+        "using VRC.Udon.Common.Interfaces;".to_string(),
+        String::new(),
+    ];
+    let namespace = class_ir.namespace.as_deref().filter(|ns| !ns.is_empty());
+    if let Some(ns) = namespace {
+        lines.push(format!("namespace {ns}"));
+        lines.push("{".into());
+    }
+    if let Some(mode) = &metadata.behaviour_sync_mode {
+        lines.push(format!("[UdonBehaviourSyncMode(BehaviourSyncMode.{mode})]"));
+    }
+    lines.push(format!(
+        "public class {} : UdonSharpBehaviour",
+        identifier(&class_ir.class_name)
+    ));
+    lines.push("{".into());
+    let mut declared = HashSet::new();
+    for declaration in &class_ir.variable_declarations {
+        let variable = require_variable(&view, declaration.variable_address);
+        let original = require_variable(ctx, declaration.variable_address);
+        if metadata.parameter_symbols.contains(&original.name)
+            || original.name.starts_with("__refl_")
+        {
+            continue;
+        }
+        declared.insert(variable.address);
+        append_lift_field(
+            &mut lines,
+            variable,
+            original.name.as_str(),
+            declaration
+                .init_value
+                .as_ref()
+                .map(render_literal)
+                .as_deref(),
+            metadata,
+        );
+    }
+    // Optimizations may remove unused fields, but source must retain every exported/synced variable.
+    for variable in &view.variables.variables {
+        let original = require_variable(ctx, variable.address);
+        if !declared.contains(&variable.address)
+            && !metadata.parameter_symbols.contains(&original.name)
+            && (variable.exported || metadata.synced_fields.contains_key(&original.name))
+        {
+            append_lift_field(
+                &mut lines,
+                variable,
+                &original.name,
+                Some(&variable.init_value),
+                metadata,
+            );
+        }
+    }
+    for function in &class_ir.functions {
+        lines.push(String::new());
+        let event = metadata.events.get(&function.function_name);
+        let mut function_view = view.clone();
+        let mut used: HashSet<String> = view
+            .variables
+            .variables
+            .iter()
+            .filter(|var| var.scope == super::VariableScope::Global)
+            .map(|var| var.name.clone())
+            .collect();
+        if let Some(event) = event {
+            for arg in &event.arguments {
+                let name = identifier(&arg.name);
+                used.insert(name.clone());
+                if let Some(symbol) = ctx.symbols.iter().find(|symbol| symbol.name == arg.symbol)
+                    && let Some(variable) =
+                        function_view.variables.get_mut_by_address(symbol.address)
+                {
+                    variable.name = name;
+                }
+            }
+        }
+        for declaration in &function.variable_declarations {
+            let original = require_variable(ctx, declaration.variable_address);
+            if metadata.parameter_symbols.contains(&original.name) {
+                continue;
+            }
+            let base = local_name(&original.name, &original.type_name);
+            let mut name = base.clone();
+            let mut suffix = 0;
+            while !used.insert(name.clone()) {
+                suffix += 1;
+                name = format!("{base}_{suffix}");
+            }
+            function_view
+                .variables
+                .get_mut_by_address(original.address)
+                .unwrap()
+                .name = name;
+        }
+        let (name, visibility, parameters) = if let Some(event) = event {
+            (
+                event.method_name.as_str(),
+                if event.is_override {
+                    "public override "
+                } else {
+                    "private "
+                },
+                event
+                    .arguments
+                    .iter()
+                    .map(|arg| {
+                        format!(
+                            "{} {}",
+                            render_context_type_name(&arg.type_name, ctx),
+                            identifier(&arg.name)
+                        )
+                    })
+                    .collect::<Vec<_>>()
+                    .join(", "),
+            )
+        } else {
+            (
+                function.function_name.as_str(),
+                if function.is_function_public {
+                    "public "
+                } else {
+                    "private "
+                },
+                String::new(),
+            )
+        };
+        lines.push(format!(
+            "{visibility}void {}({parameters})",
+            identifier(name)
+        ));
+        lines.push("{".into());
+        for declaration in &function.variable_declarations {
+            let original = require_variable(ctx, declaration.variable_address);
+            if metadata.parameter_symbols.contains(&original.name) {
+                continue;
+            }
+            let variable = require_variable(&function_view, declaration.variable_address);
+            let ty = render_context_type_name(&variable.type_name, ctx);
+            let init = declaration
+                .init_value
+                .as_ref()
+                .map(render_literal)
+                .unwrap_or_else(|| format!("default({ty})"));
+            lines.push(format!("{ty} {} = {init};", variable.name));
+        }
+        append_function_body(&mut lines, function, &function_view);
+        lines.push("}".into());
+    }
+    lines.push("}".into());
+    if namespace.is_some() {
+        lines.push("}".into());
+    }
+    let raw = lines.join("\n");
+    if ctx.clang_format_enabled {
+        format_csharp(&raw, ctx.clang_format_override.as_deref())
+    } else {
+        Ok(raw)
+    }
+}
+
+fn append_lift_field(
+    out: &mut Vec<String>,
+    variable: &VariableRecord,
+    original_name: &str,
+    init: Option<&str>,
+    metadata: &super::UdonSharpMetadata,
+) {
+    if let Some(mode) = metadata.synced_fields.get(original_name) {
+        out.push(format!("[UdonSynced(UdonSyncMode.{mode})]"));
+    }
+    let ty = format!("global::{}", render_type_name(&variable.type_name));
+    let declaration = if let Some(init) = init {
+        format!("{ty} {} = {init};", variable.name)
+    } else {
+        format!("{ty} {};", variable.name)
+    };
+    out.push(format!(
+        "{}{declaration}",
+        if variable.exported {
+            "public "
+        } else if metadata.enum_constants.contains(&variable.address) {
+            "private "
+        } else {
+            "[SerializeField] private "
+        }
+    ));
 }
 fn append_function(out: &mut Vec<String>, function: &IrFunction, ctx: &DecompileContext) {
     out.push(format!(
@@ -192,10 +399,23 @@ fn append_statement_with_context(
 ) {
     match statement {
         IrStatement::Assignment(IrAssignmentStatement { target, value }) => {
+            let value = if ctx.udonsharp.is_some() {
+                if let IrExpression::Variable(target_var) = target {
+                    let ty = render_context_type_name(
+                        &require_variable(ctx, target_var.address).type_name,
+                        ctx,
+                    );
+                    format!("({ty})({})", render_expression(value, ctx))
+                } else {
+                    render_expression(value, ctx)
+                }
+            } else {
+                render_expression(value, ctx)
+            };
             out.push(format!(
                 "{} = {};",
                 render_assignment_target(target, ctx),
-                render_expression(value, ctx)
+                value
             ));
         }
         IrStatement::Expression(IrExpressionStatement { expression }) => {
@@ -441,13 +661,24 @@ pub(crate) fn render_expression(expression: &IrExpression, ctx: &DecompileContex
     match expression {
         IrExpression::Literal(literal) => render_literal(literal),
         IrExpression::Variable(variable) => render_variable_expression(variable.address, ctx),
-        IrExpression::Raw(raw) => raw.value.clone(),
+        IrExpression::Raw(raw) => {
+            if ctx.udonsharp.is_some() {
+                render_context_type_name(&raw.value, ctx)
+            } else {
+                raw.value.clone()
+            }
+        }
         IrExpression::InternalCall(call) => {
             let name = call
                 .function_name
                 .clone()
                 .unwrap_or_else(|| format!("func_0x{:08X}", call.entry_address));
-            format!("{}()", sanitize_identifier(name.as_str()))
+            let name = ctx
+                .udonsharp
+                .as_ref()
+                .and_then(|metadata| metadata.events.get(&name))
+                .map_or(name.as_str(), |event| event.method_name.as_str());
+            format!("{}()", sanitize_identifier(name))
         }
         IrExpression::ExternalCall(call) => render_external_call_expression(call, ctx),
         IrExpression::PropertyAccess(call) => render_property_access_expression(call, ctx),
@@ -488,6 +719,15 @@ fn render_type_name(type_name: &str) -> String {
         TYPE_SYSTEM_OBJECT.to_string()
     } else {
         normalize_csharp_type_name(head)
+    }
+}
+
+fn render_context_type_name(type_name: &str, ctx: &DecompileContext) -> String {
+    let name = render_type_name(type_name);
+    if ctx.udonsharp.is_some() {
+        format!("global::{name}")
+    } else {
+        name
     }
 }
 
@@ -539,7 +779,7 @@ fn render_external_call_expression(
         let rendered_args = render_call_args(call, &args, 0);
         let callable = format!(
             "{}.{}",
-            render_type_name(call.function_info.type_name.as_str()),
+            render_context_type_name(call.function_info.type_name.as_str(), ctx),
             method
         );
         return format!("{callable}({rendered_args})");
@@ -584,7 +824,7 @@ fn render_property_access_expression(
         )
     });
     if call.function_info.is_static || args.is_empty() {
-        let owner = render_type_name(call.function_info.type_name.as_str());
+        let owner = render_context_type_name(call.function_info.type_name.as_str(), ctx);
         return format!("{owner}.{property}");
     }
 
@@ -616,7 +856,7 @@ fn render_constructor_call_expression(
         };
         return format!(
             "new {}[{}]",
-            render_type_name(element_type),
+            render_context_type_name(element_type, ctx),
             render_expression(length, ctx)
         );
     }
@@ -629,7 +869,7 @@ fn render_constructor_call_expression(
         .join(", ");
     format!(
         "new {}({args})",
-        render_type_name(call.function_info.type_name.as_str())
+        render_context_type_name(call.function_info.type_name.as_str(), ctx)
     )
 }
 

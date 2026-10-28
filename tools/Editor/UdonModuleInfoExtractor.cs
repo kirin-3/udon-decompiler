@@ -49,6 +49,44 @@ public class UdonModuleInfoExtractor : EditorWindow
         public bool returnsVoid;
     }
 
+    // Export the SDK's authoritative UdonSharp event names and parameter symbols.
+    public static void ExportBuiltinEvents(string path)
+    {
+        Type compiler = typeof(UdonSharpEditor.UdonSharpEditorUtility).Assembly.GetType("UdonSharp.Compiler.Udon.CompilerUdonInterface", true);
+        compiler.GetMethod("IsUdonEventName", BindingFlags.Public | BindingFlags.Static).Invoke(null, new object[] { "Interact" });
+        var names = (Dictionary<string, string>)compiler.GetField("_builtinEventLookup", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null);
+        MethodInfo getArgs = compiler.GetMethod("GetUdonEventArgs", BindingFlags.Public | BindingFlags.Static);
+        var events = new SortedDictionary<string, object>();
+        foreach (var pair in names)
+        {
+            var rawArgs = ((System.Collections.IEnumerable)getArgs.Invoke(null, new object[] { pair.Key })).Cast<object>().ToArray();
+            Type[] argTypes = rawArgs.Select(arg => (Type)arg.GetType().GetField("Item2").GetValue(arg)).ToArray();
+            MethodInfo baseMethod = typeof(UdonSharp.UdonSharpBehaviour).GetMethods(BindingFlags.Public | BindingFlags.Instance)
+                .FirstOrDefault(method => method.Name == pair.Key && method.GetParameters().Select(parameter => parameter.ParameterType).SequenceEqual(argTypes));
+            ParameterInfo[] baseParameters = baseMethod?.GetParameters();
+            var arguments = new List<object>();
+            int index = 0;
+            foreach (object argument in rawArgs)
+            {
+                Type tuple = argument.GetType();
+                string symbol = (string)tuple.GetField("Item1").GetValue(argument);
+                Type type = (Type)tuple.GetField("Item2").GetValue(argument);
+                string name = baseParameters != null && index < baseParameters.Length ? baseParameters[index].Name : symbol;
+                string prefix = pair.Value.TrimStart('_');
+                if (name.StartsWith(prefix, StringComparison.Ordinal) && name.Length > prefix.Length)
+                    name = char.ToLowerInvariant(name[prefix.Length]) + name.Substring(prefix.Length + 1);
+                arguments.Add(new { symbol, name, type = type.FullName.Replace('+', '.') });
+                index++;
+            }
+            events[pair.Value] = new { method_name = pair.Key, udon_name = pair.Value, arguments, is_override = baseMethod != null && baseMethod.IsVirtual };
+        }
+        File.WriteAllText(path, JsonConvert.SerializeObject(events, Formatting.Indented), new UTF8Encoding(false));
+        var syncModes = Enum.GetValues(typeof(VRC.SDKBase.Networking.SyncType)).Cast<VRC.SDKBase.Networking.SyncType>()
+            .ToDictionary(mode => Convert.ToInt32(mode).ToString(), mode => mode.ToString());
+        File.WriteAllText(Path.Combine(Path.GetDirectoryName(path), "UdonSyncModes.json"), JsonConvert.SerializeObject(syncModes, Formatting.Indented), new UTF8Encoding(false));
+        Debug.Log($"UdonSharp event table saved to {path}: {events.Count} events");
+    }
+
     [MenuItem("Tools/Udon Decompiler/Extract Udon Module Info")]
     public static void ExtractModuleInfo()
     {
@@ -142,6 +180,8 @@ public class UdonModuleInfoExtractor : EditorWindow
         string json = JsonConvert.SerializeObject(result, settings);
         string path = Path.Combine(Application.dataPath, "UdonModuleInfo.json");
         File.WriteAllText(path, json, new UTF8Encoding(false));
+
+        ExportBuiltinEvents(Path.Combine(Application.dataPath, "UdonEvents.json"));
 
         AssetDatabase.Refresh();
         Debug.Log($"Module info saved to: {path}");

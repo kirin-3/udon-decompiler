@@ -27,6 +27,14 @@ impl ITransform for ConstToLiteral {
             .variables
             .variables
             .iter()
+            .filter(|variable| {
+                !_context
+                    .program_context
+                    .decompile_context
+                    .udonsharp
+                    .as_ref()
+                    .is_some_and(|metadata| metadata.enum_constants.contains(&variable.address))
+            })
             .map(|variable| (variable.address, variable))
             .collect::<HashMap<_, _>>();
         for block in &mut function.body.blocks {

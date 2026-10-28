@@ -66,6 +66,7 @@ pub struct DecompileHeapEntry {
 
 #[derive(Debug, Clone)]
 pub struct DecompileContext {
+    pub udonsharp: Option<super::UdonSharpMetadata>,
     pub input_path: Option<PathBuf>,
     pub input_file_name: Option<String>,
     pub inferred_class_name: String,
@@ -132,6 +133,7 @@ impl DecompileContext {
         let symbols = load_symbols(program, SymbolSection::SymbolTable)?;
 
         let mut ctx = Self {
+            udonsharp: None,
             input_path: None,
             input_file_name,
             inferred_class_name: DEFAULT_DECOMPILED_PROGRAM_CLASS_NAME.to_string(),

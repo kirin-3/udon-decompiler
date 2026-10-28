@@ -1,0 +1,1642 @@
+{
+  "_custom_1_Parameters": {
+    "method_name": "Custom_1_Parameters",
+    "udon_name": "_custom_1_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_1_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_2_Parameters": {
+    "method_name": "Custom_2_Parameters",
+    "udon_name": "_custom_2_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_2_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_2_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_3_Parameters": {
+    "method_name": "Custom_3_Parameters",
+    "udon_name": "_custom_3_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_3_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_3_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_3_ParametersParameter3",
+        "name": "parameter3",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_4_Parameters": {
+    "method_name": "Custom_4_Parameters",
+    "udon_name": "_custom_4_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_4_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_4_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_4_ParametersParameter3",
+        "name": "parameter3",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_4_ParametersParameter4",
+        "name": "parameter4",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_5_Parameters": {
+    "method_name": "Custom_5_Parameters",
+    "udon_name": "_custom_5_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_5_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_5_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_5_ParametersParameter3",
+        "name": "parameter3",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_5_ParametersParameter4",
+        "name": "parameter4",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_5_ParametersParameter5",
+        "name": "parameter5",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_6_Parameters": {
+    "method_name": "Custom_6_Parameters",
+    "udon_name": "_custom_6_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_6_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_6_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_6_ParametersParameter3",
+        "name": "parameter3",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_6_ParametersParameter4",
+        "name": "parameter4",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_6_ParametersParameter5",
+        "name": "parameter5",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_6_ParametersParameter6",
+        "name": "parameter6",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_7_Parameters": {
+    "method_name": "Custom_7_Parameters",
+    "udon_name": "_custom_7_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_7_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_7_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_7_ParametersParameter3",
+        "name": "parameter3",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_7_ParametersParameter4",
+        "name": "parameter4",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_7_ParametersParameter5",
+        "name": "parameter5",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_7_ParametersParameter6",
+        "name": "parameter6",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_7_ParametersParameter7",
+        "name": "parameter7",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_custom_8_Parameters": {
+    "method_name": "Custom_8_Parameters",
+    "udon_name": "_custom_8_Parameters",
+    "arguments": [
+      {
+        "symbol": "custom_8_ParametersParameter1",
+        "name": "parameter1",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter2",
+        "name": "parameter2",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter3",
+        "name": "parameter3",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter4",
+        "name": "parameter4",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter5",
+        "name": "parameter5",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter6",
+        "name": "parameter6",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter7",
+        "name": "parameter7",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "custom_8_ParametersParameter8",
+        "name": "parameter8",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_fixedUpdate": {
+    "method_name": "FixedUpdate",
+    "udon_name": "_fixedUpdate",
+    "arguments": [],
+    "is_override": false
+  },
+  "_inputDrop": {
+    "method_name": "InputDrop",
+    "udon_name": "_inputDrop",
+    "arguments": [
+      {
+        "symbol": "inputDropBoolValue",
+        "name": "value",
+        "type": "System.Boolean"
+      },
+      {
+        "symbol": "inputDropArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputGrab": {
+    "method_name": "InputGrab",
+    "udon_name": "_inputGrab",
+    "arguments": [
+      {
+        "symbol": "inputGrabBoolValue",
+        "name": "value",
+        "type": "System.Boolean"
+      },
+      {
+        "symbol": "inputGrabArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputJump": {
+    "method_name": "InputJump",
+    "udon_name": "_inputJump",
+    "arguments": [
+      {
+        "symbol": "inputJumpBoolValue",
+        "name": "value",
+        "type": "System.Boolean"
+      },
+      {
+        "symbol": "inputJumpArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputLookHorizontal": {
+    "method_name": "InputLookHorizontal",
+    "udon_name": "_inputLookHorizontal",
+    "arguments": [
+      {
+        "symbol": "inputLookHorizontalFloatValue",
+        "name": "value",
+        "type": "System.Single"
+      },
+      {
+        "symbol": "inputLookHorizontalArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputLookVertical": {
+    "method_name": "InputLookVertical",
+    "udon_name": "_inputLookVertical",
+    "arguments": [
+      {
+        "symbol": "inputLookVerticalFloatValue",
+        "name": "value",
+        "type": "System.Single"
+      },
+      {
+        "symbol": "inputLookVerticalArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputMoveHorizontal": {
+    "method_name": "InputMoveHorizontal",
+    "udon_name": "_inputMoveHorizontal",
+    "arguments": [
+      {
+        "symbol": "inputMoveHorizontalFloatValue",
+        "name": "value",
+        "type": "System.Single"
+      },
+      {
+        "symbol": "inputMoveHorizontalArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputMoveVertical": {
+    "method_name": "InputMoveVertical",
+    "udon_name": "_inputMoveVertical",
+    "arguments": [
+      {
+        "symbol": "inputMoveVerticalFloatValue",
+        "name": "value",
+        "type": "System.Single"
+      },
+      {
+        "symbol": "inputMoveVerticalArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_inputUse": {
+    "method_name": "InputUse",
+    "udon_name": "_inputUse",
+    "arguments": [
+      {
+        "symbol": "inputUseBoolValue",
+        "name": "value",
+        "type": "System.Boolean"
+      },
+      {
+        "symbol": "inputUseArgs",
+        "name": "args",
+        "type": "VRC.Udon.Common.UdonInputEventArgs"
+      }
+    ],
+    "is_override": true
+  },
+  "_interact": {
+    "method_name": "Interact",
+    "udon_name": "_interact",
+    "arguments": [],
+    "is_override": true
+  },
+  "_lateUpdate": {
+    "method_name": "LateUpdate",
+    "udon_name": "_lateUpdate",
+    "arguments": [],
+    "is_override": false
+  },
+  "_midiControlChange": {
+    "method_name": "MidiControlChange",
+    "udon_name": "_midiControlChange",
+    "arguments": [
+      {
+        "symbol": "midiControlChangeChannel",
+        "name": "channel",
+        "type": "System.Int32"
+      },
+      {
+        "symbol": "midiControlChangeNumber",
+        "name": "number",
+        "type": "System.Int32"
+      },
+      {
+        "symbol": "midiControlChangeValue",
+        "name": "value",
+        "type": "System.Int32"
+      }
+    ],
+    "is_override": true
+  },
+  "_midiNoteOff": {
+    "method_name": "MidiNoteOff",
+    "udon_name": "_midiNoteOff",
+    "arguments": [
+      {
+        "symbol": "midiNoteOffChannel",
+        "name": "channel",
+        "type": "System.Int32"
+      },
+      {
+        "symbol": "midiNoteOffNumber",
+        "name": "number",
+        "type": "System.Int32"
+      },
+      {
+        "symbol": "midiNoteOffVelocity",
+        "name": "velocity",
+        "type": "System.Int32"
+      }
+    ],
+    "is_override": true
+  },
+  "_midiNoteOn": {
+    "method_name": "MidiNoteOn",
+    "udon_name": "_midiNoteOn",
+    "arguments": [
+      {
+        "symbol": "midiNoteOnChannel",
+        "name": "channel",
+        "type": "System.Int32"
+      },
+      {
+        "symbol": "midiNoteOnNumber",
+        "name": "number",
+        "type": "System.Int32"
+      },
+      {
+        "symbol": "midiNoteOnVelocity",
+        "name": "velocity",
+        "type": "System.Int32"
+      }
+    ],
+    "is_override": true
+  },
+  "_onAnimatorIK": {
+    "method_name": "OnAnimatorIK",
+    "udon_name": "_onAnimatorIK",
+    "arguments": [
+      {
+        "symbol": "onAnimatorIKLayerIndex",
+        "name": "layerIndex",
+        "type": "System.Int32"
+      }
+    ],
+    "is_override": false
+  },
+  "_onAnimatorMove": {
+    "method_name": "OnAnimatorMove",
+    "udon_name": "_onAnimatorMove",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onAsyncGpuReadbackComplete": {
+    "method_name": "OnAsyncGpuReadbackComplete",
+    "udon_name": "_onAsyncGpuReadbackComplete",
+    "arguments": [
+      {
+        "symbol": "onAsyncGpuReadbackCompleteRequest",
+        "name": "request",
+        "type": "VRC.SDK3.Rendering.VRCAsyncGPUReadbackRequest"
+      }
+    ],
+    "is_override": true
+  },
+  "_onAvatarChanged": {
+    "method_name": "OnAvatarChanged",
+    "udon_name": "_onAvatarChanged",
+    "arguments": [
+      {
+        "symbol": "onAvatarChangedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onAvatarEyeHeightChanged": {
+    "method_name": "OnAvatarEyeHeightChanged",
+    "udon_name": "_onAvatarEyeHeightChanged",
+    "arguments": [
+      {
+        "symbol": "onAvatarEyeHeightChangedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      },
+      {
+        "symbol": "onAvatarEyeHeightChangedPrevEyeHeightAsMeters",
+        "name": "prevEyeHeightAsMeters",
+        "type": "System.Single"
+      }
+    ],
+    "is_override": true
+  },
+  "_onBecameInvisible": {
+    "method_name": "OnBecameInvisible",
+    "udon_name": "_onBecameInvisible",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onBecameVisible": {
+    "method_name": "OnBecameVisible",
+    "udon_name": "_onBecameVisible",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onCollisionEnter": {
+    "method_name": "OnCollisionEnter",
+    "udon_name": "_onCollisionEnter",
+    "arguments": [
+      {
+        "symbol": "onCollisionEnterOther",
+        "name": "other",
+        "type": "UnityEngine.Collision"
+      }
+    ],
+    "is_override": false
+  },
+  "_onCollisionEnter2D": {
+    "method_name": "OnCollisionEnter2D",
+    "udon_name": "_onCollisionEnter2D",
+    "arguments": [
+      {
+        "symbol": "onCollisionEnter2DOther",
+        "name": "other",
+        "type": "UnityEngine.Collision2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onCollisionExit": {
+    "method_name": "OnCollisionExit",
+    "udon_name": "_onCollisionExit",
+    "arguments": [
+      {
+        "symbol": "onCollisionExitOther",
+        "name": "other",
+        "type": "UnityEngine.Collision"
+      }
+    ],
+    "is_override": false
+  },
+  "_onCollisionExit2D": {
+    "method_name": "OnCollisionExit2D",
+    "udon_name": "_onCollisionExit2D",
+    "arguments": [
+      {
+        "symbol": "onCollisionExit2DOther",
+        "name": "other",
+        "type": "UnityEngine.Collision2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onCollisionStay": {
+    "method_name": "OnCollisionStay",
+    "udon_name": "_onCollisionStay",
+    "arguments": [
+      {
+        "symbol": "onCollisionStayOther",
+        "name": "other",
+        "type": "UnityEngine.Collision"
+      }
+    ],
+    "is_override": false
+  },
+  "_onCollisionStay2D": {
+    "method_name": "OnCollisionStay2D",
+    "udon_name": "_onCollisionStay2D",
+    "arguments": [
+      {
+        "symbol": "onCollisionStay2DOther",
+        "name": "other",
+        "type": "UnityEngine.Collision2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onContactEnter": {
+    "method_name": "OnContactEnter",
+    "udon_name": "_onContactEnter",
+    "arguments": [
+      {
+        "symbol": "onContactEnterContactInfo",
+        "name": "contactInfo",
+        "type": "VRC.Dynamics.ContactEnterInfo"
+      }
+    ],
+    "is_override": true
+  },
+  "_onContactExit": {
+    "method_name": "OnContactExit",
+    "udon_name": "_onContactExit",
+    "arguments": [
+      {
+        "symbol": "onContactExitContactInfo",
+        "name": "contactInfo",
+        "type": "VRC.Dynamics.ContactExitInfo"
+      }
+    ],
+    "is_override": true
+  },
+  "_onControllerColliderHit": {
+    "method_name": "OnControllerColliderHit",
+    "udon_name": "_onControllerColliderHit",
+    "arguments": [
+      {
+        "symbol": "onControllerColliderHitHit",
+        "name": "hit",
+        "type": "UnityEngine.ControllerColliderHit"
+      }
+    ],
+    "is_override": false
+  },
+  "_onControllerColliderHitPlayer": {
+    "method_name": "OnControllerColliderHitPlayer",
+    "udon_name": "_onControllerColliderHitPlayer",
+    "arguments": [
+      {
+        "symbol": "onControllerColliderHitPlayerHit",
+        "name": "hit",
+        "type": "VRC.SDK3.ControllerColliderPlayerHit"
+      }
+    ],
+    "is_override": true
+  },
+  "_onDeserialization": {
+    "method_name": "OnDeserialization",
+    "udon_name": "_onDeserialization",
+    "arguments": [
+      {
+        "symbol": "onDeserializationResult",
+        "name": "result",
+        "type": "VRC.Udon.Common.DeserializationResult"
+      }
+    ],
+    "is_override": true
+  },
+  "_onDestroy": {
+    "method_name": "OnDestroy",
+    "udon_name": "_onDestroy",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onDisable": {
+    "method_name": "OnDisable",
+    "udon_name": "_onDisable",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onDroneTriggerEnter": {
+    "method_name": "OnDroneTriggerEnter",
+    "udon_name": "_onDroneTriggerEnter",
+    "arguments": [
+      {
+        "symbol": "onDroneTriggerEnterDrone",
+        "name": "drone",
+        "type": "VRC.SDKBase.VRCDroneApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onDroneTriggerExit": {
+    "method_name": "OnDroneTriggerExit",
+    "udon_name": "_onDroneTriggerExit",
+    "arguments": [
+      {
+        "symbol": "onDroneTriggerExitDrone",
+        "name": "drone",
+        "type": "VRC.SDKBase.VRCDroneApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onDroneTriggerStay": {
+    "method_name": "OnDroneTriggerStay",
+    "udon_name": "_onDroneTriggerStay",
+    "arguments": [
+      {
+        "symbol": "onDroneTriggerStayDrone",
+        "name": "drone",
+        "type": "VRC.SDKBase.VRCDroneApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onDrop": {
+    "method_name": "OnDrop",
+    "udon_name": "_onDrop",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onEnable": {
+    "method_name": "OnEnable",
+    "udon_name": "_onEnable",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onImageLoadError": {
+    "method_name": "OnImageLoadError",
+    "udon_name": "_onImageLoadError",
+    "arguments": [
+      {
+        "symbol": "onImageLoadErrorIVRCImageDownload",
+        "name": "result",
+        "type": "VRC.SDK3.Image.IVRCImageDownload"
+      }
+    ],
+    "is_override": true
+  },
+  "_onImageLoadSuccess": {
+    "method_name": "OnImageLoadSuccess",
+    "udon_name": "_onImageLoadSuccess",
+    "arguments": [
+      {
+        "symbol": "onImageLoadSuccessIVRCImageDownload",
+        "name": "result",
+        "type": "VRC.SDK3.Image.IVRCImageDownload"
+      }
+    ],
+    "is_override": true
+  },
+  "_onInputMethodChanged": {
+    "method_name": "OnInputMethodChanged",
+    "udon_name": "_onInputMethodChanged",
+    "arguments": [
+      {
+        "symbol": "onInputMethodChangedInputMethod",
+        "name": "inputMethod",
+        "type": "VRC.SDKBase.VRCInputMethod"
+      }
+    ],
+    "is_override": true
+  },
+  "_onJointBreak": {
+    "method_name": "OnJointBreak",
+    "udon_name": "_onJointBreak",
+    "arguments": [
+      {
+        "symbol": "onJointBreakBreakForce",
+        "name": "breakForce",
+        "type": "System.Single"
+      }
+    ],
+    "is_override": false
+  },
+  "_onJointBreak2D": {
+    "method_name": "OnJointBreak2D",
+    "udon_name": "_onJointBreak2D",
+    "arguments": [
+      {
+        "symbol": "onJointBreak2DBrokenJoint",
+        "name": "brokenJoint",
+        "type": "UnityEngine.Joint2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onLanguageChanged": {
+    "method_name": "OnLanguageChanged",
+    "udon_name": "_onLanguageChanged",
+    "arguments": [
+      {
+        "symbol": "onLanguageChangedLanguage",
+        "name": "language",
+        "type": "System.String"
+      }
+    ],
+    "is_override": true
+  },
+  "_onListAvailableProducts": {
+    "method_name": "OnListAvailableProducts",
+    "udon_name": "_onListAvailableProducts",
+    "arguments": [
+      {
+        "symbol": "onListAvailableProductsResult",
+        "name": "products",
+        "type": "VRC.Economy.IProduct[]"
+      }
+    ],
+    "is_override": true
+  },
+  "_onListProductOwners": {
+    "method_name": "OnListProductOwners",
+    "udon_name": "_onListProductOwners",
+    "arguments": [
+      {
+        "symbol": "onListProductOwnersResult",
+        "name": "product",
+        "type": "VRC.Economy.IProduct"
+      },
+      {
+        "symbol": "onListProductOwnersOwners",
+        "name": "owners",
+        "type": "System.String[]"
+      }
+    ],
+    "is_override": true
+  },
+  "_onListPurchases": {
+    "method_name": "OnListPurchases",
+    "udon_name": "_onListPurchases",
+    "arguments": [
+      {
+        "symbol": "onListPurchasesResult",
+        "name": "products",
+        "type": "VRC.Economy.IProduct[]"
+      },
+      {
+        "symbol": "onListPurchasesPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onMasterTransferred": {
+    "method_name": "OnMasterTransferred",
+    "udon_name": "_onMasterTransferred",
+    "arguments": [
+      {
+        "symbol": "onMasterTransferredNewMaster",
+        "name": "newMaster",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onMouseDown": {
+    "method_name": "OnMouseDown",
+    "udon_name": "_onMouseDown",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onMouseDrag": {
+    "method_name": "OnMouseDrag",
+    "udon_name": "_onMouseDrag",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onMouseEnter": {
+    "method_name": "OnMouseEnter",
+    "udon_name": "_onMouseEnter",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onMouseExit": {
+    "method_name": "OnMouseExit",
+    "udon_name": "_onMouseExit",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onMouseOver": {
+    "method_name": "OnMouseOver",
+    "udon_name": "_onMouseOver",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onMouseUp": {
+    "method_name": "OnMouseUp",
+    "udon_name": "_onMouseUp",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onMouseUpAsButton": {
+    "method_name": "OnMouseUpAsButton",
+    "udon_name": "_onMouseUpAsButton",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onOwnershipRequest": {
+    "method_name": "OnOwnershipRequest",
+    "udon_name": "_onOwnershipRequest",
+    "arguments": [
+      {
+        "symbol": "onOwnershipRequestRequester",
+        "name": "requestingPlayer",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      },
+      {
+        "symbol": "onOwnershipRequestNewOwner",
+        "name": "requestedOwner",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onOwnershipTransferred": {
+    "method_name": "OnOwnershipTransferred",
+    "udon_name": "_onOwnershipTransferred",
+    "arguments": [
+      {
+        "symbol": "onOwnershipTransferredPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onParticleCollision": {
+    "method_name": "OnParticleCollision",
+    "udon_name": "_onParticleCollision",
+    "arguments": [
+      {
+        "symbol": "onParticleCollisionOther",
+        "name": "other",
+        "type": "UnityEngine.GameObject"
+      }
+    ],
+    "is_override": false
+  },
+  "_onParticleTrigger": {
+    "method_name": "OnParticleTrigger",
+    "udon_name": "_onParticleTrigger",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onPersistenceUsageUpdated": {
+    "method_name": "OnPersistenceUsageUpdated",
+    "udon_name": "_onPersistenceUsageUpdated",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onPhysBoneGrabbed": {
+    "method_name": "OnPhysBoneGrabbed",
+    "udon_name": "_onPhysBoneGrabbed",
+    "arguments": [
+      {
+        "symbol": "onPhysBoneGrabbedPhysBoneInfo",
+        "name": "physBoneInfo",
+        "type": "VRC.Dynamics.PhysBoneGrabbedInfo"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPhysBonePosed": {
+    "method_name": "OnPhysBonePosed",
+    "udon_name": "_onPhysBonePosed",
+    "arguments": [
+      {
+        "symbol": "onPhysBonePosedPhysBoneInfo",
+        "name": "physBoneInfo",
+        "type": "VRC.Dynamics.PhysBonePosedInfo"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPhysBoneReleased": {
+    "method_name": "OnPhysBoneReleased",
+    "udon_name": "_onPhysBoneReleased",
+    "arguments": [
+      {
+        "symbol": "onPhysBoneReleasedPhysBoneInfo",
+        "name": "physBoneInfo",
+        "type": "VRC.Dynamics.PhysBoneReleasedInfo"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPhysBoneUnPosed": {
+    "method_name": "OnPhysBoneUnPosed",
+    "udon_name": "_onPhysBoneUnPosed",
+    "arguments": [
+      {
+        "symbol": "onPhysBoneUnPosedPhysBoneInfo",
+        "name": "physBoneInfo",
+        "type": "VRC.Dynamics.PhysBoneUnPosedInfo"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPickup": {
+    "method_name": "OnPickup",
+    "udon_name": "_onPickup",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onPickupUseDown": {
+    "method_name": "OnPickupUseDown",
+    "udon_name": "_onPickupUseDown",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onPickupUseUp": {
+    "method_name": "OnPickupUseUp",
+    "udon_name": "_onPickupUseUp",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onPlayerCollisionEnter": {
+    "method_name": "OnPlayerCollisionEnter",
+    "udon_name": "_onPlayerCollisionEnter",
+    "arguments": [
+      {
+        "symbol": "onPlayerCollisionEnterPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerCollisionExit": {
+    "method_name": "OnPlayerCollisionExit",
+    "udon_name": "_onPlayerCollisionExit",
+    "arguments": [
+      {
+        "symbol": "onPlayerCollisionExitPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerCollisionStay": {
+    "method_name": "OnPlayerCollisionStay",
+    "udon_name": "_onPlayerCollisionStay",
+    "arguments": [
+      {
+        "symbol": "onPlayerCollisionStayPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerDataStorageExceeded": {
+    "method_name": "OnPlayerDataStorageExceeded",
+    "udon_name": "_onPlayerDataStorageExceeded",
+    "arguments": [
+      {
+        "symbol": "onPlayerDataStorageExceededPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerDataStorageWarning": {
+    "method_name": "OnPlayerDataStorageWarning",
+    "udon_name": "_onPlayerDataStorageWarning",
+    "arguments": [
+      {
+        "symbol": "onPlayerDataStorageWarningPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerDataUpdated": {
+    "method_name": "OnPlayerDataUpdated",
+    "udon_name": "_onPlayerDataUpdated",
+    "arguments": [
+      {
+        "symbol": "onPlayerDataUpdatedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      },
+      {
+        "symbol": "onPlayerDataUpdatedInfos",
+        "name": "infos",
+        "type": "VRC.SDK3.Persistence.PlayerData.Info[]"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerJoined": {
+    "method_name": "OnPlayerJoined",
+    "udon_name": "_onPlayerJoined",
+    "arguments": [
+      {
+        "symbol": "onPlayerJoinedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerLeft": {
+    "method_name": "OnPlayerLeft",
+    "udon_name": "_onPlayerLeft",
+    "arguments": [
+      {
+        "symbol": "onPlayerLeftPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerObjectStorageExceeded": {
+    "method_name": "OnPlayerObjectStorageExceeded",
+    "udon_name": "_onPlayerObjectStorageExceeded",
+    "arguments": [
+      {
+        "symbol": "onPlayerObjectStorageExceededPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerObjectStorageWarning": {
+    "method_name": "OnPlayerObjectStorageWarning",
+    "udon_name": "_onPlayerObjectStorageWarning",
+    "arguments": [
+      {
+        "symbol": "onPlayerObjectStorageWarningPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerParticleCollision": {
+    "method_name": "OnPlayerParticleCollision",
+    "udon_name": "_onPlayerParticleCollision",
+    "arguments": [
+      {
+        "symbol": "onPlayerParticleCollisionPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerRespawn": {
+    "method_name": "OnPlayerRespawn",
+    "udon_name": "_onPlayerRespawn",
+    "arguments": [
+      {
+        "symbol": "onPlayerRespawnPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerRestored": {
+    "method_name": "OnPlayerRestored",
+    "udon_name": "_onPlayerRestored",
+    "arguments": [
+      {
+        "symbol": "onPlayerRestoredPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerSuspendChanged": {
+    "method_name": "OnPlayerSuspendChanged",
+    "udon_name": "_onPlayerSuspendChanged",
+    "arguments": [
+      {
+        "symbol": "onPlayerSuspendChangedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerTriggerEnter": {
+    "method_name": "OnPlayerTriggerEnter",
+    "udon_name": "_onPlayerTriggerEnter",
+    "arguments": [
+      {
+        "symbol": "onPlayerTriggerEnterPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerTriggerExit": {
+    "method_name": "OnPlayerTriggerExit",
+    "udon_name": "_onPlayerTriggerExit",
+    "arguments": [
+      {
+        "symbol": "onPlayerTriggerExitPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPlayerTriggerStay": {
+    "method_name": "OnPlayerTriggerStay",
+    "udon_name": "_onPlayerTriggerStay",
+    "arguments": [
+      {
+        "symbol": "onPlayerTriggerStayPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPostRender": {
+    "method_name": "OnPostRender",
+    "udon_name": "_onPostRender",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onPostSerialization": {
+    "method_name": "OnPostSerialization",
+    "udon_name": "_onPostSerialization",
+    "arguments": [
+      {
+        "symbol": "onPostSerializationResult",
+        "name": "result",
+        "type": "VRC.Udon.Common.SerializationResult"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPreCull": {
+    "method_name": "OnPreCull",
+    "udon_name": "_onPreCull",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onPreRender": {
+    "method_name": "OnPreRender",
+    "udon_name": "_onPreRender",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onPreSerialization": {
+    "method_name": "OnPreSerialization",
+    "udon_name": "_onPreSerialization",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onProductEvent": {
+    "method_name": "OnProductEvent",
+    "udon_name": "_onProductEvent",
+    "arguments": [
+      {
+        "symbol": "onProductEventResult",
+        "name": "product",
+        "type": "VRC.Economy.IProduct"
+      },
+      {
+        "symbol": "onProductEventPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPurchaseConfirmed": {
+    "method_name": "OnPurchaseConfirmed",
+    "udon_name": "_onPurchaseConfirmed",
+    "arguments": [
+      {
+        "symbol": "onPurchaseConfirmedResult",
+        "name": "product",
+        "type": "VRC.Economy.IProduct"
+      },
+      {
+        "symbol": "onPurchaseConfirmedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      },
+      {
+        "symbol": "onPurchaseConfirmedPurchasedNow",
+        "name": "purchasedNow",
+        "type": "System.Boolean"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPurchaseConfirmedMultiple": {
+    "method_name": "OnPurchaseConfirmedMultiple",
+    "udon_name": "_onPurchaseConfirmedMultiple",
+    "arguments": [
+      {
+        "symbol": "onPurchaseConfirmedMultipleResult",
+        "name": "product",
+        "type": "VRC.Economy.IProduct"
+      },
+      {
+        "symbol": "onPurchaseConfirmedMultiplePlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      },
+      {
+        "symbol": "onPurchaseConfirmedMultiplePurchasedNow",
+        "name": "purchasedNow",
+        "type": "System.Boolean"
+      },
+      {
+        "symbol": "onPurchaseConfirmedMultipleQuantity",
+        "name": "quantity",
+        "type": "System.Int32"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPurchaseExpired": {
+    "method_name": "OnPurchaseExpired",
+    "udon_name": "_onPurchaseExpired",
+    "arguments": [
+      {
+        "symbol": "onPurchaseExpiredResult",
+        "name": "product",
+        "type": "VRC.Economy.IProduct"
+      },
+      {
+        "symbol": "onPurchaseExpiredPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onPurchasesLoaded": {
+    "method_name": "OnPurchasesLoaded",
+    "udon_name": "_onPurchasesLoaded",
+    "arguments": [
+      {
+        "symbol": "onPurchasesLoadedResult",
+        "name": "products",
+        "type": "VRC.Economy.IProduct[]"
+      },
+      {
+        "symbol": "onPurchasesLoadedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onRenderImage": {
+    "method_name": "OnRenderImage",
+    "udon_name": "_onRenderImage",
+    "arguments": [
+      {
+        "symbol": "onRenderImageSrc",
+        "name": "src",
+        "type": "UnityEngine.RenderTexture"
+      },
+      {
+        "symbol": "onRenderImageDest",
+        "name": "dest",
+        "type": "UnityEngine.RenderTexture"
+      }
+    ],
+    "is_override": false
+  },
+  "_onRenderObject": {
+    "method_name": "OnRenderObject",
+    "udon_name": "_onRenderObject",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onScreenUpdate": {
+    "method_name": "OnScreenUpdate",
+    "udon_name": "_onScreenUpdate",
+    "arguments": [
+      {
+        "symbol": "onScreenUpdateData",
+        "name": "data",
+        "type": "VRC.SDK3.Platform.ScreenUpdateData"
+      }
+    ],
+    "is_override": true
+  },
+  "_onSpawn": {
+    "method_name": "OnSpawn",
+    "udon_name": "_onSpawn",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onStationEntered": {
+    "method_name": "OnStationEntered",
+    "udon_name": "_onStationEntered",
+    "arguments": [
+      {
+        "symbol": "onStationEnteredPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onStationExited": {
+    "method_name": "OnStationExited",
+    "udon_name": "_onStationExited",
+    "arguments": [
+      {
+        "symbol": "onStationExitedPlayer",
+        "name": "player",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      }
+    ],
+    "is_override": true
+  },
+  "_onStringLoadError": {
+    "method_name": "OnStringLoadError",
+    "udon_name": "_onStringLoadError",
+    "arguments": [
+      {
+        "symbol": "onStringLoadErrorIVRCStringDownload",
+        "name": "result",
+        "type": "VRC.SDK3.StringLoading.IVRCStringDownload"
+      }
+    ],
+    "is_override": true
+  },
+  "_onStringLoadSuccess": {
+    "method_name": "OnStringLoadSuccess",
+    "udon_name": "_onStringLoadSuccess",
+    "arguments": [
+      {
+        "symbol": "onStringLoadSuccessIVRCStringDownload",
+        "name": "result",
+        "type": "VRC.SDK3.StringLoading.IVRCStringDownload"
+      }
+    ],
+    "is_override": true
+  },
+  "_onTransformChildrenChanged": {
+    "method_name": "OnTransformChildrenChanged",
+    "udon_name": "_onTransformChildrenChanged",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onTransformParentChanged": {
+    "method_name": "OnTransformParentChanged",
+    "udon_name": "_onTransformParentChanged",
+    "arguments": [],
+    "is_override": false
+  },
+  "_onTriggerEnter": {
+    "method_name": "OnTriggerEnter",
+    "udon_name": "_onTriggerEnter",
+    "arguments": [
+      {
+        "symbol": "onTriggerEnterOther",
+        "name": "other",
+        "type": "UnityEngine.Collider"
+      }
+    ],
+    "is_override": false
+  },
+  "_onTriggerEnter2D": {
+    "method_name": "OnTriggerEnter2D",
+    "udon_name": "_onTriggerEnter2D",
+    "arguments": [
+      {
+        "symbol": "onTriggerEnter2DOther",
+        "name": "other",
+        "type": "UnityEngine.Collider2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onTriggerExit": {
+    "method_name": "OnTriggerExit",
+    "udon_name": "_onTriggerExit",
+    "arguments": [
+      {
+        "symbol": "onTriggerExitOther",
+        "name": "other",
+        "type": "UnityEngine.Collider"
+      }
+    ],
+    "is_override": false
+  },
+  "_onTriggerExit2D": {
+    "method_name": "OnTriggerExit2D",
+    "udon_name": "_onTriggerExit2D",
+    "arguments": [
+      {
+        "symbol": "onTriggerExit2DOther",
+        "name": "other",
+        "type": "UnityEngine.Collider2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onTriggerStay": {
+    "method_name": "OnTriggerStay",
+    "udon_name": "_onTriggerStay",
+    "arguments": [
+      {
+        "symbol": "onTriggerStayOther",
+        "name": "other",
+        "type": "UnityEngine.Collider"
+      }
+    ],
+    "is_override": false
+  },
+  "_onTriggerStay2D": {
+    "method_name": "OnTriggerStay2D",
+    "udon_name": "_onTriggerStay2D",
+    "arguments": [
+      {
+        "symbol": "onTriggerStay2DOther",
+        "name": "other",
+        "type": "UnityEngine.Collider2D"
+      }
+    ],
+    "is_override": false
+  },
+  "_onVariableChange": {
+    "method_name": "OnVariableChange",
+    "udon_name": "_onVariableChange",
+    "arguments": [
+      {
+        "symbol": "onVariableChangeNewValue",
+        "name": "newValue",
+        "type": "System.Object"
+      },
+      {
+        "symbol": "onVariableChangeOldValue",
+        "name": "oldValue",
+        "type": "System.Object"
+      }
+    ],
+    "is_override": false
+  },
+  "_onVideoEnd": {
+    "method_name": "OnVideoEnd",
+    "udon_name": "_onVideoEnd",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onVideoError": {
+    "method_name": "OnVideoError",
+    "udon_name": "_onVideoError",
+    "arguments": [
+      {
+        "symbol": "onVideoErrorVideoError",
+        "name": "videoError",
+        "type": "VRC.SDK3.Components.Video.VideoError"
+      }
+    ],
+    "is_override": true
+  },
+  "_onVideoLoop": {
+    "method_name": "OnVideoLoop",
+    "udon_name": "_onVideoLoop",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onVideoReady": {
+    "method_name": "OnVideoReady",
+    "udon_name": "_onVideoReady",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onVideoStart": {
+    "method_name": "OnVideoStart",
+    "udon_name": "_onVideoStart",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onVRCCameraSettingsChanged": {
+    "method_name": "OnVRCCameraSettingsChanged",
+    "udon_name": "_onVRCCameraSettingsChanged",
+    "arguments": [
+      {
+        "symbol": "onVRCCameraSettingsChangedCamera",
+        "name": "cameraSettings",
+        "type": "VRC.SDK3.Rendering.VRCCameraSettings"
+      }
+    ],
+    "is_override": true
+  },
+  "_onVRCPlusMassGift": {
+    "method_name": "OnVRCPlusMassGift",
+    "udon_name": "_onVRCPlusMassGift",
+    "arguments": [
+      {
+        "symbol": "onVRCPlusMassGiftGifter",
+        "name": "gifter",
+        "type": "VRC.SDKBase.VRCPlayerApi"
+      },
+      {
+        "symbol": "onVRCPlusMassGiftNumGifts",
+        "name": "numGifts",
+        "type": "System.Int32"
+      }
+    ],
+    "is_override": true
+  },
+  "_onVRCQualitySettingsChanged": {
+    "method_name": "OnVRCQualitySettingsChanged",
+    "udon_name": "_onVRCQualitySettingsChanged",
+    "arguments": [],
+    "is_override": true
+  },
+  "_onWillRenderObject": {
+    "method_name": "OnWillRenderObject",
+    "udon_name": "_onWillRenderObject",
+    "arguments": [],
+    "is_override": false
+  },
+  "_postLateUpdate": {
+    "method_name": "PostLateUpdate",
+    "udon_name": "_postLateUpdate",
+    "arguments": [],
+    "is_override": true
+  },
+  "_start": {
+    "method_name": "Start",
+    "udon_name": "_start",
+    "arguments": [],
+    "is_override": false
+  },
+  "_update": {
+    "method_name": "Update",
+    "udon_name": "_update",
+    "arguments": [],
+    "is_override": false
+  }
+}

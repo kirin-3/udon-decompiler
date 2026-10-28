@@ -26,7 +26,7 @@ pub use types::{
 };
 pub type Result<T> = types::Result<T>;
 pub(crate) use literal::{
-    HeapLiteralValue, literal_from_typed_odin_node, render_heap_literal,
+    HeapLiteralValue, literal_from_typed_odin_node, render_heap_literal, render_lift_heap_entry,
     resolve_heap_literal_for_program_entry,
 };
 pub(crate) use text::generated_heap_symbol;

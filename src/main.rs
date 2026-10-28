@@ -33,6 +33,17 @@ struct Cli {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
+    /// Lift a compiled UdonSharp program to compilable UdonSharp source.
+    Us {
+        input: PathBuf,
+        output: Option<PathBuf>,
+        #[arg(long)]
+        event_info: Option<PathBuf>,
+        #[arg(long)]
+        sync_mode: Option<String>,
+        #[arg(long = "no-format")]
+        no_format: bool,
+    },
     /// Decompile .hex or .asset to C#.
     Dc {
         input: PathBuf,
@@ -100,6 +111,30 @@ fn main() -> Result<()> {
     debug!(module_info = %module_info_path.display(), "module info path configured");
 
     let res = match cli.command {
+        Commands::Us {
+            input,
+            output,
+            event_info,
+            sync_mode,
+            no_format,
+        } => {
+            let bytes = read_program_bytes(&input)?;
+            let program = UdonProgramBinary::parse_bytes(&bytes)?;
+            let mut ctx = DecompileContext::from_file(&input)?;
+            ctx.set_clang_format_enabled(!no_format);
+            let events =
+                event_info.unwrap_or_else(|| module_info_path.with_file_name("UdonEvents.json"));
+            ctx.enable_udonsharp(&program, &events, sync_mode)?;
+            let source = ctx.run_decompile()?.generated_code;
+            let output = output.unwrap_or_else(|| {
+                input.with_file_name(format!("{}.cs", ctx.infer_output_stem_for_file()))
+            });
+            if let Some(parent) = output.parent() {
+                fs::create_dir_all(parent)?;
+            }
+            fs::write(output, source)?;
+            Ok(())
+        }
         Commands::Dc {
             input,
             output,

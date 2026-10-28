@@ -14,6 +14,15 @@ pub struct TempVariableInline;
 
 impl ITransform for TempVariableInline {
     fn run(&self, function: &mut IrFunction, context: &mut TransformContext<'_, '_>) -> Result<()> {
+        // Keep the heap destination types needed for casts in compilable source.
+        if context
+            .program_context
+            .decompile_context
+            .udonsharp
+            .is_some()
+        {
+            return Ok(());
+        }
         let mut successor_cache = HashMap::<u32, HashMap<u32, Vec<u32>>>::new();
         let variables = context
             .program_context

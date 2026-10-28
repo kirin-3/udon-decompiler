@@ -2,6 +2,7 @@ mod constants;
 mod default;
 mod dotnet_time;
 mod enum_map;
+mod lift;
 mod parse;
 mod render;
 
@@ -80,6 +81,7 @@ pub(crate) fn enum_repr_for_type(type_name: &str) -> Option<EnumRepr> {
     enum_repr(type_name_head(type_name))
 }
 
+pub(crate) use lift::render_lift_heap_entry;
 pub(crate) use parse::{
     literal_from_typed_odin_node, parse_heap_init_directive, parse_type_ref,
     resolve_heap_literal_for_program_entry,

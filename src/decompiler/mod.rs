@@ -9,6 +9,7 @@ mod ir;
 mod module_info;
 mod pipeline;
 mod transform;
+mod udonsharp;
 mod variable;
 
 pub use basic_block::{BasicBlock, BasicBlockCollection, BasicBlockType};
@@ -39,6 +40,7 @@ pub use transform::{
     StatementTransformContext, TransformContext, TransformPipeline, build_default_pipeline,
     run_block_transforms, run_il_transforms,
 };
+pub use udonsharp::{UdonSharpArgument, UdonSharpEvent, UdonSharpMetadata};
 pub use variable::{VariableRecord, VariableScope, VariableTable};
 
 pub type Result<T> = std::result::Result<T, DecompileError>;
